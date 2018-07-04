@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './AppHeader'
 
 class App extends Component {
   constructor(props) {
@@ -14,26 +15,41 @@ class App extends Component {
         { id: 5, name: 'Omer Salinas' },
         { id: 6, name: 'Phyllis Bass' },
         { id: 7, name: 'Lane Harrell' },
-        { id: 8, name: 'Kristopher Weiss' },
+        { id: 8, name: 'Kristopher Weisstenshiern' },
         { id: 9, name: 'Aileen Solis' },
         { id: 10, name: 'Mark Krueger' },
         { id: 11, name: 'Sofia Rhodes' },
         { id: 12, name: 'Allan Savage' }
       ],
-      selectedClient: null
+      selectedClientId: null
     };
   }
 
+  onClientSelected(id){
+    this.setState({ selectedClientId: id });
+  }
+
   render() {
-    const clientListItems = this.state.clients.map(c => <li key={c.id}>{c.name}</li>);
+    const { clients, selectedClientId } = this.state;
+    let selectedClient = null;
+    if (selectedClientId !== null) {
+      selectedClient = clients.filter(c => c.id === selectedClientId)[0];
+    }
+
+    const clientListItems = clients.map(c => {
+      const onClientSelected = () => this.onClientSelected(c.id);
+      return (<li key={c.id} onClick={onClientSelected}>{c.name}</li>)
+    });
+    
+    const deselectClient = () => this.onClientSelected(null);
 
     return (
       <div>
-        <h1>Clients</h1>
+        <Header defaultTitle="Clients" selectedClient={selectedClient} onBack={deselectClient}/>
         <ul className="list-clients">
           {clientListItems}
         </ul>
-      </div>
+      </div >
     );
   }
 }
