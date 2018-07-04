@@ -9,7 +9,7 @@
     left: .5rem;
     opacity: 0;
     font-size: 1.25rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .app-header.app-header-drill .back-arrow {
@@ -23,7 +23,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .app-header h1.selected {

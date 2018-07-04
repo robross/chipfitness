@@ -21,12 +21,6 @@ class App extends Component {
         { id: 10, name: 'Mark Krueger' },
         { id: 11, name: 'Sofia Rhodes' },
         { id: 12, name: 'Allan Savage' },
-
-        { id: 8, name: 'Kristopher Weisstenshiern' },
-        { id: 9, name: 'Aileen Solis' },
-        { id: 10, name: 'Mark Krueger' },
-        { id: 11, name: 'Sofia Rhodes' },
-        { id: 12, name: 'Allan Savage' }
       ],
       selectedClientId: null
     };
@@ -49,7 +43,7 @@ class App extends Component {
     return (
       <div>
         <Header defaultTitle="Clients" selectedClient={selectedClient} onBack={deselectClient}/>
-        <ClientList clients={clients} onSelect={onClientSelected}/>
+        <ClientList clients={clients} onSelect={onClientSelected} selectedClient={selectedClient} />
       </div >
     );
   }

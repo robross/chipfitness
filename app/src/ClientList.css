@@ -8,6 +8,11 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   border-top: 1px solid #ddd;
+  transition: all 0.4s ease;
+}
+
+.client-list-container-off {
+  transform: translate3d(-100%, 0, 0);
 }
 
 .list-clients {
