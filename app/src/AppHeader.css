@@ -18,11 +18,16 @@
 
 .app-header h1 {
     font-size: 3.5rem;
+    line-height: 4rem;
     background: linear-gradient(to right, #fff, 90%, rgba(255,255,255,0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
     transition: all 0.3s ease;
+}
+
+.app-header h1.selected {
+    font-size: 2rem;
 }
 
 .app-header h1.default {
@@ -35,8 +40,8 @@
 }
 
 .app-header.app-header-drill h1.default {
-    transform-origin: 0 0;  
-    transform: scale(0.35) translate3d(2.5rem, -3.3rem, 0);    
+    transform-origin: 0 0;   
+    transform: scale(0.35) translate3d(2.5rem, -2.75rem, 0);    
 }
 
 .app-header.app-header-drill h1.selected {
