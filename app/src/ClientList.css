@@ -1,0 +1,27 @@
+.client-list-container {
+  position: absolute;
+  top: 104px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid #ddd;
+}
+
+.list-clients {
+  margin: 0;
+  padding: 0;
+}
+
+.list-clients li {
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  padding: .5rem;
+
+  background: linear-gradient(to right, #fff, 90%, rgba(255,255,255,0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}

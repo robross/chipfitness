@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './AppHeader'
+import ClientList from './ClientList'
 
 class App extends Component {
   constructor(props) {
@@ -15,6 +16,12 @@ class App extends Component {
         { id: 5, name: 'Omer Salinas' },
         { id: 6, name: 'Phyllis Bass' },
         { id: 7, name: 'Lane Harrell' },
+        { id: 8, name: 'Kristopher Weisstenshiern' },
+        { id: 9, name: 'Aileen Solis' },
+        { id: 10, name: 'Mark Krueger' },
+        { id: 11, name: 'Sofia Rhodes' },
+        { id: 12, name: 'Allan Savage' },
+
         { id: 8, name: 'Kristopher Weisstenshiern' },
         { id: 9, name: 'Aileen Solis' },
         { id: 10, name: 'Mark Krueger' },
@@ -36,19 +43,13 @@ class App extends Component {
       selectedClient = clients.filter(c => c.id === selectedClientId)[0];
     }
 
-    const clientListItems = clients.map(c => {
-      const onClientSelected = () => this.onClientSelected(c.id);
-      return (<li key={c.id} onClick={onClientSelected}>{c.name}</li>)
-    });
-    
     const deselectClient = () => this.onClientSelected(null);
+    const onClientSelected = (id) => this.onClientSelected(id);
 
     return (
       <div>
         <Header defaultTitle="Clients" selectedClient={selectedClient} onBack={deselectClient}/>
-        <ul className="list-clients">
-          {clientListItems}
-        </ul>
+        <ClientList clients={clients} onSelect={onClientSelected}/>
       </div >
     );
   }
