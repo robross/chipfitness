@@ -4,7 +4,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <h1>ChipFitnes333ddds</h1>
+      <h1>Chip Fitness</h1>
     );
   }
 }
