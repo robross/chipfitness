@@ -2,7 +2,8 @@
     position: relative;
     padding: 1.5rem .5rem 0 .5rem;
     z-index: 10;
-    -webkit-backdrop-filter: blur(5px);
+    background:rgba(247,151,30, .8);
+    border-bottom: 1px solid #F7971E;
 }
 
 .app-header .back-arrow {
