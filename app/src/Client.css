@@ -1,0 +1,24 @@
+.client-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 104px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+}
+
+.client-container .panel:first-child{
+  margin-top: 0;
+}
+
+.panel {
+  background: #eee;
+  margin: .5rem;
+  padding: .5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}

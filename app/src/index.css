@@ -9,6 +9,10 @@ body {
   color: #fff;
 }
 
+html, body {
+  overflow: hidden;
+}
+
 .text-hand {
   font-family: 'Nothing You Could Do', cursive;
 }

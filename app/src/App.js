@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import CSSTransition from 'react-transition-group/CSSTransition';
 import './App.css';
 import Header from './AppHeader'
 import ClientList from './ClientList'
+import Client from './Client'
 
 class App extends Component {
   constructor(props) {
@@ -21,12 +23,18 @@ class App extends Component {
         { id: 10, name: 'Mark Krueger' },
         { id: 11, name: 'Sofia Rhodes' },
         { id: 12, name: 'Allan Savage' },
+        { id: 13, name: 'Lane Harrell' },
+        { id: 14, name: 'Kristopher Weisstenshiern' },
+        { id: 15, name: 'Aileen Solis' },
+        { id: 16, name: 'Mark Krueger' },
+        { id: 17, name: 'Sofia Rhodes' },
+        { id: 18, name: 'Allan Savage' },
       ],
       selectedClientId: null
     };
   }
 
-  onClientSelected(id){
+  onClientSelected(id) {
     this.setState({ selectedClientId: id });
   }
 
@@ -42,8 +50,13 @@ class App extends Component {
 
     return (
       <div>
-        <Header defaultTitle="Clients" selectedClient={selectedClient} onBack={deselectClient}/>
-        <ClientList clients={clients} onSelect={onClientSelected} selectedClient={selectedClient} />
+        <Header defaultTitle="Clients" selectedClient={selectedClient} onBack={deselectClient} />
+        <CSSTransition in={selectedClientId === null} timeout={300} classNames="page-l" unmountOnExit>
+          {state => (<ClientList clients={clients} onSelect={onClientSelected} selectedClient={selectedClient} />)}
+        </CSSTransition>
+        <CSSTransition in={selectedClientId !== null} timeout={300} classNames="page-r" unmountOnExit>
+          {state => (<Client selectedClient={selectedClient} />)}
+        </CSSTransition>
       </div >
     );
   }

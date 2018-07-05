@@ -1,18 +1,14 @@
 .client-list-container {
   position: absolute;
-  top: 104px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  padding-top: 104px;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  border-top: 1px solid #ddd;
-  transition: all 0.4s ease;
-}
-
-.client-list-container-off {
-  transform: translate3d(-100%, 0, 0);
+  z-index: 1;
 }
 
 .list-clients {
@@ -25,8 +21,12 @@
   border-bottom: 1px solid #ddd;
   padding: .5rem;
 
-  background: linear-gradient(to right, #fff, 90%, rgba(255,255,255,0));
+  background: linear-gradient(to right, #fff, 95%, rgba(255,255,255,0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
+}
+
+.list-clients li:first-child {
+  border-top: 1px solid #ddd;
 }
