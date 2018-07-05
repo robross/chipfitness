@@ -26,6 +26,7 @@
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
     transition: all 0.4s ease;
+    transform-origin: 0 0;
 }
 
 .app-header h1.selected {
@@ -42,8 +43,7 @@
 }
 
 .app-header.app-header-drill h1.default {
-    transform-origin: 0 0;   
-    transform: scale(0.35) translate3d(2.5rem, -2.75rem, 0);    
+    transform: scale(0.35) translate3d(2.5rem, -2.75rem, 0); 
 }
 
 .app-header.app-header-drill h1.selected {
