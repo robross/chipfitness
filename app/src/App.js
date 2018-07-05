@@ -51,10 +51,10 @@ class App extends Component {
     return (
       <div>
         <Header defaultTitle="Clients" selectedClient={selectedClient} onBack={deselectClient} />
-        <CSSTransition in={selectedClientId === null} timeout={300} classNames="page-l" unmountOnExit>
+        <CSSTransition in={selectedClientId === null} timeout={500} classNames="page-l" unmountOnExit>
           {state => (<ClientList clients={clients} onSelect={onClientSelected} selectedClient={selectedClient} />)}
         </CSSTransition>
-        <CSSTransition in={selectedClientId !== null} timeout={300} classNames="page-r" unmountOnExit>
+        <CSSTransition in={selectedClientId !== null} timeout={500} classNames="page-r" unmountOnExit>
           {state => (<Client selectedClient={selectedClient} />)}
         </CSSTransition>
       </div >

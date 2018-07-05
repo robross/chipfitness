@@ -6,14 +6,14 @@
 	opacity: 1;
 	transform: translate3d(0,0,0);
 	transition-property: transform, opacity;
-	transition-duration: .3s;
+	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
 }
 .page-l-exit {
 	opacity: 1;
 	transform: translate3d(0,0,0);
 	transition-property: transform, opacity;
-	transition-duration: .3s;
+	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
 }
 .page-l-exit-active {
@@ -29,14 +29,14 @@
 	opacity: 1;
 	transform: translate3d(0,0,0);
 	transition-property: transform, opacity;
-	transition-duration: .3s;
+	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
 }
 .page-r-exit {
 	opacity: 1;
 	transform: translate3d(0,0,0);
 	transition-property: transform, opacity;
-	transition-duration: .3s;
+	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear;
 }
 .page-r-exit-active {
