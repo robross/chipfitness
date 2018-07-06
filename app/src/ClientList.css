@@ -4,11 +4,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding-top: 104px;
+  padding-top: 97px;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  z-index: 1;
+  z-index: 2;
 }
 
 .list-clients {
@@ -18,15 +18,15 @@
 
 .list-clients li {
   list-style: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #F2F2F2;
   padding: .5rem;
 
-  background: linear-gradient(to right, #fff, 95%, rgba(255,255,255,0));
+  background: linear-gradient(to right, #F2F2F2, 95%, rgba(255,255,255,0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
 }
 
 .list-clients li:first-child {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #F2F2F2;
 }

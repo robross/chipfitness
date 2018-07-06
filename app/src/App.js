@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import './App.css';
-import Header from './AppHeader'
-import ClientList from './ClientList'
-import Client from './Client'
+import Header from './AppHeader';
+import ClientList from './ClientList';
+import Client from './Client';
+import Fab from './AppFab';
 
 class App extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class App extends Component {
         <CSSTransition in={selectedClientId !== null} timeout={500} classNames="page-r" unmountOnExit>
           {state => (<Client selectedClient={selectedClient} />)}
         </CSSTransition>
+        <Fab/>
       </div >
     );
   }

@@ -2,8 +2,9 @@
     position: relative;
     padding: 1.5rem .5rem 0 .5rem;
     z-index: 10;
-    background:rgba(247,151,30, .8);
-    border-bottom: 1px solid #F7971E;
+    background:rgba(233,116,49, .8);
+    border-bottom: 1px solid #F08B2F;
+    overflow: hidden;
 }
 
 .app-header .back-arrow {
@@ -13,6 +14,7 @@
     opacity: 0;
     font-size: 1.25rem;
     transition: all 0.4s ease;
+    z-index: 11;
 }
 
 .app-header.app-header-drill .back-arrow {
@@ -22,12 +24,13 @@
 .app-header h1 {
     font-size: 3.5rem;
     line-height: 4rem;
-    background: linear-gradient(to right, #fff, 95%, rgba(255,255,255,0));
+    background: linear-gradient(to right, #F2F2F2, 95%, rgba(255,255,255,0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
     transition: all 0.4s ease;
     transform-origin: 0 0;
+    z-index: 11;
 }
 
 .app-header h1.selected {
@@ -40,7 +43,7 @@
 }
 
 .app-header h1.selected {
-    transform: translate3d(100%, 0, 0);    
+    transform: translate3d(0, 100%, 0);  
 }
 
 .app-header.app-header-drill h1.default {
@@ -49,5 +52,5 @@
 
 .app-header.app-header-drill h1.selected {
     opacity: 1;
-    transform: translate3d(0, 0, 0);    
+    transform: translate3d(0, 0, 0);  
 }

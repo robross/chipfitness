@@ -5,13 +5,20 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   
-  background: linear-gradient(#F7971E, #F7971E, rgb(247, 171, 30)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #fff;
+  background: linear-gradient(#E97431, #E97431, #F08B2F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #F2F2F2;
 }
 
 html, body {
   overflow: hidden;
   height: 100%;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 }
 
 .text-hand {
